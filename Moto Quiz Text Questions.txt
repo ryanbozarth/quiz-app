@@ -1,0 +1,41 @@
+## Moto Quiz Copy
+
+###### When was the motorcycle’s layout established?
+- 1904
+- 1914 (!)
+- 1922
+- 1934
+
+The layout of the modern motorcycle remained relatively unchanged since it was established in 1914.
+
+###### The frame, suspension, wheels, and brake comprise the motorcycle’s:
+- body
+- channel
+- chassis (!)
+- engine
+
+A motorcycle chassis includes the frame, suspension, wheels, and brakes.
+
+###### What allows motorcycles to use tubeless tires now?
+- cast wheels (!)
+- pneumatic tires
+- steel rims
+- compressed air
+
+Cast wheels allow the bikes to use tubeless tires, which, unlike traditional pneumatic tires, don't have an inner tube to hold the compressed air. Instead, the air is held between the rim and the tire, relying on a seal to maintain the internal air pressure.
+
+###### What do riders use to active a motorcycle’s brakes?
+- hand lever
+- foot pedals
+- both hand and foot pedals (!)
+- Drag their feet
+
+Riders engage the front brake with a hand lever on the right grip and the rear brake with the right foot pedal.
+
+###### The rotational force of the crankshaft is transmitted to:
+- the engine
+- the front wheel 
+- the rear wheel (!)
+- the rider
+
+Rotational force created by the crankshaft is transmitted to the motorcycle’s rear wheel via the transmission.
