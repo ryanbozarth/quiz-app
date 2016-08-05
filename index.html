@@ -27,10 +27,7 @@
 				<button class="next-button">Click here to start</button>
 			</section>
 		</div>
-
-
 	</div>
-
 
 	<div class="question-one">
 		<div class="header-background-dark">
@@ -40,10 +37,12 @@
 			<section class="card">
 			<h1>When was the motorcycle's layout established?</h1>
 			<ul class="answer-list">
-				<li><span><i class="material-icons">clear</i></span><p>1904</p></li>
-				<li class="correct-answer"><span><i class="material-icons">done</i></span>1914</li>
-				<li><span><i class="material-icons">clear</i></span>1922</li>
-				<li><span><i class="material-icons">clear</i></span>1936</li>
+				<li>
+					<span><i class="material-icons wrong">clear</i></span><p>1904</p></li>
+				<li class="correct-li">
+					<span><i class="material-icons correct">done</i></span><p>1914</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>1922</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>1936</p></li>
 			</ul>
 			<button class="next-button">Next Question</button>
 			</section
@@ -55,10 +54,10 @@
 			<section class="card">
 			<h1>The frame, suspension, and wheels comprise the motorcycle’s:</h1>
 			<ul class="answer-list">
-				<li><span><i class="material-icons">clear</i></span><p>body</p></li>
-				<li><span><i class="material-icons">clear</i></span>channel</li>
-				<li class="correct-answer"><span><i class="material-icons">done</i></span>chassis</li>
-				<li><span><i class="material-icons">clear</i></span>engine</li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>body</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>channel</p></li>
+				<li class="correct-li"><span><i class="material-icons correct">done</i></span><p>chassis</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>engine</p></li>
 			</ul>
 			<button class="next-button">Next Question</button>
 			</section>
@@ -70,10 +69,10 @@
 		<section class="card">
 			<h1>What allows motorcycles to use tubeless tires now?</h1>
 			<ul class="answer-list">
-				<li class="correct-answer"><span><i class="material-icons">done</i></span><p>cast wheels</p></li>
-				<li><span><i class="material-icons">clear</i></span>pneumatic tires</li>
-				<li><span><i class="material-icons">clear</i></span>steel rims</li>
-				<li><span><i class="material-icons">clear</i></span>compressed air</li>
+				<li class="correct-li"><span><i class="material-icons correct">done</i></span><p>cast wheels</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>pneumatic tires</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>steel rims</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>compressed air</p></li>
 			</ul>
 			<button class="next-button">Next Question</button>
 		</section>
@@ -85,10 +84,10 @@
 		<section class="card">
 			<h1>What do riders use to active a motorcycle’s brakes?</h1>
 			<ul class="answer-list">
-				<li><span><i class="material-icons">clear</i></span><p>hand lever</p></li>
-				<li><span><i class="material-icons">clear</i></span>foot pedals</li>
-				<li class="correct-answer"><span><i class="material-icons">done</i></span>both and hand foot pedals</li>
-				<li><span><i class="material-icons">clear</i></span>drag their feet</li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>hand lever</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>foot pedals</p></li>
+				<li class="correct-li"><span><i class="material-icons correct">done</i></span><p>both and hand foot pedals</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>drag their feet</p></li>
 			</ul>
 			<button class="next-button">Next Question</button>
 		</section>
@@ -100,12 +99,21 @@
 		<section class="card">
 			<h1>The rotational force of the crankshaft is transmitted to:</h1>
 			<ul class="answer-list">
-				<li><span><i class="material-icons">clear</i></span><p>the engine</p></li>
-				<li><span><i class="material-icons">clear</i></span>the front wheel</li>
-				<li class="correct-answer"><span><i class="material-icons">done</i></span>the rear wheel</li>
-				<li><span><i class="material-icons">clear</i></span>the rider</li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>the engine</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>the front wheel</p></li>
+				<li class="correct-li"><span><i class="material-icons correct">done</i></span><p>the rear wheel</p></li>
+				<li><span><i class="material-icons wrong">clear</i></span><p>the rider</p></li>
 			</ul>
 			<button class="next-button">Next Question</button>
+		</section>
+		</div>
+	</div>
+
+	<div class="end-game">
+		<div class="main-background">
+		<section class="card">
+			<h1>Congratulations! You answered <span>4</span> of 5 questions right.</h1>
+			<button class="next-button">Start a new game</button>
 		</section>
 		</div>
 	</div>
@@ -117,5 +125,6 @@
 
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
