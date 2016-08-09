@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 
-    var currentQuestion = 0;
+    var  = 0;
 
 
     var questions = [{
@@ -37,25 +37,26 @@ $(document).ready(function() {
         $(".card h1").text(questions[currentQuestion].prompt);
         // loop
         for (var i = 0; i < questions[currentQuestion].answers.length; i++) {
-          $(".answer-list").append("<li>" + questions[currentQuestion].answers[i] + "</li>");
+            $(".answer-list").append("<li>" + questions[currentQuestion].answers[i] + "</li>");
         }
         $('button').addClass('.next-button');
         $('button').text("next question");
-        
-        selectionFeedback();
+
+        //selectionFeedback();
 
     });
 
-    // function selectionFeedback() {
-    //     $('li').on('click', function() {
-    //         // show the right icons
-    //         if (questions[1].correct) {
-    //             $('li').addClass('.correct-li');
-    //         } else {
-    //             $('li').addClass('.incorrect-li');
-    //         }
-    //     })
-    // }
+    function selectionFeedback() {
+        $('li').on('click', function() {
+            // show the right icons
+           if (questions[currentQuestion].correct) {
+                alert("you're right");
+               //$('this').addClass('.correct-li');
+           } else {
+               $('this').addClass('.incorrect-li');
+           }
+        })
+    }
 
 
 }); // end doc ready
