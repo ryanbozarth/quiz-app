@@ -35,23 +35,27 @@ $(document).ready(function() {
         $('.header-background-dark').html("<p>Question <span></span> of 5</p>");
         $('.header-background-dark span').text(currentQuestion + 1);
         $(".card h1").text(questions[currentQuestion].prompt);
-
+        // loop
         for (var i = 0; i < questions[currentQuestion].answers.length; i++) {
-            $(".answer-list").append("<li>" + questions[currentQuestion].answers[i] + "</li>");
+          $(".answer-list").append("<li>" + questions[currentQuestion].answers[i] + "</li>");
         }
         $('button').addClass('.next-button');
         $('button').text("next question");
+        
+        selectionFeedback();
+
     });
 
-    $('.answer-list').on('click', function() { // why doesn't click on 'li' work
-            // show the right icons
-            if (questions[currentQuestion].correct) {
-                $('li').addClass('.correct-li');
-            }
-            else {
-                $('li').addClass('.incorrect-li');
-            }
-    })
+    // function selectionFeedback() {
+    //     $('li').on('click', function() {
+    //         // show the right icons
+    //         if (questions[1].correct) {
+    //             $('li').addClass('.correct-li');
+    //         } else {
+    //             $('li').addClass('.incorrect-li');
+    //         }
+    //     })
+    // }
 
 
 }); // end doc ready
