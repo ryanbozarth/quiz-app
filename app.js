@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 
-    var  = 0;
+    var currentQuestion = 0;
 
 
     var questions = [{
@@ -33,28 +33,30 @@ $(document).ready(function() {
     $('.start-button').click(function() {
         // numbers changing to reflect a new dynamically
         $('.header-background-dark').html("<p>Question <span></span> of 5</p>");
-        $('.header-background-dark span').text(currentQuestion + 1);
+        $('.header-background-dark span').text(currentQuestion);
         $(".card h1").text(questions[currentQuestion].prompt);
         // loop
         for (var i = 0; i < questions[currentQuestion].answers.length; i++) {
             $(".answer-list").append("<li>" + questions[currentQuestion].answers[i] + "</li>");
+            debugger
         }
         $('button').addClass('.next-button');
         $('button').text("next question");
 
-        //selectionFeedback();
+        selectionFeedback();
 
     });
 
     function selectionFeedback() {
         $('li').on('click', function() {
             // show the right icons
-           if (questions[currentQuestion].correct) {
+            if (questions[currentQuestion].correct) {
                 alert("you're right");
-               //$('this').addClass('.correct-li');
-           } else {
-               $('this').addClass('.incorrect-li');
-           }
+                //$('this').addClass('.correct-li');
+            } else {
+                alert("you're wrong");
+                // $('this').addClass('.incorrect-li');
+            }
         })
     }
 
