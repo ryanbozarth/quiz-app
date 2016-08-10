@@ -29,16 +29,14 @@ $(document).ready(function() {
     /// build out the HTML here
 
 
-
     $('.start-button').click(function() {
         // numbers changing to reflect a new dynamically
         $('.header-background-dark').html("<p>Question <span></span> of 5</p>");
         $('.header-background-dark span').text(currentQuestion);
-        $(".card h1").text(questions[currentQuestion].prompt);
+        $(".prompt").text(questions[currentQuestion].prompt);
         // loop
         for (var i = 0; i < questions[currentQuestion].answers.length; i++) {
-            $(".answer-list").append("<li>" + questions[currentQuestion].answers[i] + "</li>");
-            debugger
+            $(".answer-list").append("<li id=" + i + ">" + questions[currentQuestion].answers[i] + "</li>");
         }
         $('button').addClass('.next-button');
         $('button').text("next question");
@@ -47,18 +45,26 @@ $(document).ready(function() {
 
     });
 
+
     function selectionFeedback() {
         $('li').on('click', function() {
-            // show the right icons
-            if (questions[currentQuestion].correct) {
-                alert("you're right");
-                //$('this').addClass('.correct-li');
+            //if (questions[currentQuestion].correct === $(this).attr("value")) 
+            //alert($(this).text());
+            if (questions[currentQuestion].correct == this.id) {
+
+                $(this).toggleClass('correct-li');
             } else {
-                alert("you're wrong");
-                // $('this').addClass('.incorrect-li');
+                $(this).toggleClass('incorrect-li');
             }
+
+
+
+
+
         })
     }
+
+
 
 
 }); // end doc ready
