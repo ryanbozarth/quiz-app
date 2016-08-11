@@ -63,7 +63,7 @@ button{
 
 }
 
-.next-button, .get-score {
+.next-button, .start-button, .get-score {
 	color: white;
 	font-weight: 500;
 	font-size: 0.875em;
@@ -71,7 +71,7 @@ button{
 	text-align: center;
 	margin-top: 50px;
 }
-.next-button{
+.next-button, .start-button {
 	margin-left: 40px;
 	background-color: #455A64;
 }
@@ -120,9 +120,9 @@ li {
 	align-items: center;
 }
 
-li:hover {
+/*li:hover {
 	background-color: rgba(236,239,241,.6);
-}
+}*/
 
 .answer-list li div,
 .answer-list p,

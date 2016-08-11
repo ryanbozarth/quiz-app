@@ -4,8 +4,7 @@ $(document).ready(function() {
 
     var currentQuestion = 0;
     var numberCorrect = 0;
-
-
+    console.log(numberCorrect);
 
     var questions = [{
         prompt: "When was the motorcycle's layout established?",
@@ -29,26 +28,11 @@ $(document).ready(function() {
         correct: 2
     }];
 
+    startQuiz();
 
-    // click handler on next question button
-    // increment current question value
-    // update the question
-    // call function for 40 - 47
-
-
-
-    function cycleQuestions() {
-        $('.header-background-dark').html("<p>Question <span></span> of 5</p>");
-        $('.header-background-dark span').text(currentQuestion + 1);
-        $(".prompt").text(questions[currentQuestion].prompt);
-        for (var i = 0; i < questions[currentQuestion].answers.length; i++) {
-            $(".answer-list").append("<li id=" + i + ">" + questions[currentQuestion].answers[i] + "</li>");
-        }
-    }
 
     function startQuiz() {
         $('.start-button').click(function() {
-            // numbers changing to reflect a new dynamically
             cycleQuestions();
             selectionFeedback();
             $('button').addClass('next-button');
@@ -56,13 +40,14 @@ $(document).ready(function() {
             $('button').text("next question");
         });
     };
-
-    // give user feedback if response is correct + add numberCorrect if chosen
+    // user gets feedback on whether answer is correct (visual)
+    // if correct answer added to numberCorrect variable
     function selectionFeedback() {
         $('li').on('click', function() {
             if (questions[currentQuestion].correct == this.id) {
                 $(this).toggleClass('correct-li');
                 numberCorrect += 1;
+                console.log(numberCorrect);
             } else {
                 $(this).toggleClass('incorrect-li');
             }
@@ -70,14 +55,19 @@ $(document).ready(function() {
     };
 
     $('.next-button').click(function() {
-        // numbers changing to reflect a new dynamically
-        for (var i = 1; i < questions[currentQuestion]; i++) {
-            cycleQuestions();
-            selectionFeedback();
-        }
-       // $(startQuiz).remove();
-
+    	alert("hey");
     });
+    // user clicks on next question button
+
+    // user presented with next question
+      function cycleQuestions() {
+        $('.header-background-dark').html("<p>Question <span></span> of 5</p>");
+        $('.header-background-dark span').text(currentQuestion + 1);
+        $(".prompt").text(questions[currentQuestion].prompt);
+        for (var i = 0; i < questions[currentQuestion].answers.length; i++) {
+            $(".answer-list").append("<li id=" + i + ">" + questions[currentQuestion].answers[i] + "</li>");
+        }
+    }
 
 
 
