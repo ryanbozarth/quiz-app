@@ -5,8 +5,6 @@ $(document).ready(function() {
     var currentQuestion = 0;
     var numberCorrect = 0;
 
-
-
     var questions = [{
         prompt: "When was the motorcycle's layout established?",
         answers: ["1904", "1914", "1922", "1936"],

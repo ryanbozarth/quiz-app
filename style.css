@@ -63,7 +63,7 @@ button{
 
 }
 
-.next-button, .start-button, .get-score {
+.next-button, .start-button, .get-score, .start-game {
 	color: white;
 	font-weight: 500;
 	font-size: 0.875em;
@@ -71,9 +71,12 @@ button{
 	text-align: center;
 	margin-top: 50px;
 }
-.next-button, .start-button {
+.next-button, .start-button, .start-game {
 	margin-left: 40px;
 	background-color: #455A64;
+}
+.next-button {
+	display:none;
 }
 
 .card {
@@ -161,6 +164,9 @@ li p {
 	background-color: #E6CFC8;
 }
 
+.end-game {
+	display: none;
+}
 
 
 /*---------------------------------------------------------------------------------

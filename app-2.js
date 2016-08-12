@@ -29,20 +29,19 @@ $(document).ready(function() {
     }];
 
     startQuiz();
-
+    nextQuestion();
 
     function startQuiz() {
-        $('.start-button').click(function() {
-            cycleQuestions();
-            selectionFeedback();
-            $('button').addClass('next-button');
-            $('button').removeClass('start-button');
-            $('button').text("next question");
+        $('.start-button').on('click', function() {
+            $('.header-background-dark').html("<p>Question <span></span> of 5</p>");
+            addQuestion();
+            $('.next-button').show();
+            $('.start-button').hide();
+            userFeedback();
         });
     };
-    // user gets feedback on whether answer is correct (visual)
-    // if correct answer added to numberCorrect variable
-    function selectionFeedback() {
+
+    function userFeedback() {
         $('li').on('click', function() {
             if (questions[currentQuestion].correct == this.id) {
                 $(this).toggleClass('correct-li');
@@ -54,22 +53,37 @@ $(document).ready(function() {
         });
     };
 
-    $('.next-button').click(function() {
-    	alert("hey");
+    function nextQuestion() {
+        $('.next-button').on('click', function() {
+                currentQuestion++;
+                if (currentQuestion < questions.length){
+                    addQuestion();
+                userFeedback();
+                }
+                else{
+                    $('.question').hide();
+                    $('.end-game').show();
+                    $('#score').text(numberCorrect);
+                }
+        });
+    };
+
+    $('.start-game').on('click', function() {
+        currentQuestion = 0;
+        numberCorrect = 0;
+        $('.question').show();
+        $('.end-game').hide();
+        addQuestion();
+        userFeedback();
     });
-    // user clicks on next question button
 
     // user presented with next question
-      function cycleQuestions() {
-        $('.header-background-dark').html("<p>Question <span></span> of 5</p>");
+    function addQuestion() {
         $('.header-background-dark span').text(currentQuestion + 1);
-        $(".prompt").text(questions[currentQuestion].prompt);
+        $('.prompt').text(questions[currentQuestion].prompt);
+        $('.answer-list').empty();
         for (var i = 0; i < questions[currentQuestion].answers.length; i++) {
-            $(".answer-list").append("<li id=" + i + ">" + questions[currentQuestion].answers[i] + "</li>");
+            $('.answer-list').append("<li id=" + i + ">" + questions[currentQuestion].answers[i] + "</li>");
         }
     }
-
-
-
-
 }); // end doc ready
